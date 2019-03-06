@@ -1,2 +1,2 @@
 # Area_CellCounter
-ImageJ macro I used to count insulin positive cells
+ImageJ macro I use to count insulin positive cells
