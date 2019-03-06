@@ -1,0 +1,30 @@
+run("Duplicate...", " ");
+title = getTitle();
+run("Split Channels");
+
+selectWindow(title+" (red)");
+close();
+
+selectWindow(title+" (green)");
+setAutoThreshold("Shanbhag");
+//run("Threshold...");
+run("Remove Outliers...", "radius=10 threshold=10 which=Bright");
+//setThreshold(0, 83);
+setOption("BlackBackground", false);
+run("Make Binary", "thresholded remaining black");
+run("Invert");
+run("Dilate");
+run("Fill Holes");
+run("Create Selection");
+
+selectWindow(title+" (blue)");
+//run("Brightness/Contrast...");
+setAutoThreshold("Shanbhag");
+//run("Threshold...");
+//setThreshold(0, 100);
+run("Make Binary", "thresholded remaining black");
+run("Invert");
+run("Watershed");
+run("Restore Selection");
+run("Clear Outside");
+run("Analyze Particles...", "  show=Outlines display summarize add");
