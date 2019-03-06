@@ -10,4 +10,4 @@ This is an imageJ macro to count nuclei (stained in the blue channel) within an 
   <img src=https://github.com/adrianvillalba/Area_CellCounter/blob/master/Captura.PNG/>
 </p>
 
-This is the expected output with all the information you may get after Nuclei_Counter processing.
+This is the expected output with all the information you may get after Area_CellCounter processing.
